@@ -77,7 +77,9 @@
 > 这是我的[GitHub主页](https://github.com/Principal-tz "欢迎各位园丁们！！！")    
 
 **参考链接**：  
-[链接描述][mdn]    
+[链接描述][mdn]  
+
+<!-- 链接定义区域 -->
 [mdn]: https://github.com/Principal-tz "可选标题"     
 
 **6. 图片**
