@@ -76,12 +76,17 @@
 > [这是链接2](链接地址 "可选的标题")      
 > 这是我的[GitHub主页](https://github.com/Principal-tz "欢迎各位园丁们！！！")    
 
-**参考链接**：  
-[链接描述][mdn]  
+**参考链接**： 
+> 适用文档中存在多个链接地址，方便管理
+
+我的[GitHub主页][github]    
 
 <!-- 链接定义区域 -->
-[mdn]: https://github.com/Principal-tz "可选标题"     
+[github]: https://github.com/Principal-tz "可选标题"     
 
+**锚点链接**  
+> 可用于文档内跳转
+> [跳转](#1文本格式)
 **6. 图片**
 
 
