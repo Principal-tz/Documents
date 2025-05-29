@@ -77,8 +77,8 @@
 > 这是我的[GitHub主页](https://github.com/Principal-tz "欢迎各位园丁们！！！")    
 
 **参考链接**：  
-[链接描述] [参考标签]  
-[参考标签]: URL "可选标题"  
+[链接描述] [参考标签]    
+[参考标签]: https://github.com/Principal-tz "可选标题"  
 
 **6. 图片**
 
