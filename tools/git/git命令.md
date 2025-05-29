@@ -70,80 +70,40 @@ git push origin --delete <branch>	# 删除远程分支
 
 **5. 远程协作**
 ```bash
-
+git pull			# 拉取远程分支并合并
+git pull --rebase		# 拉取远程分支并变基	
+git push			# 推送本地提交到远程，上传代码到 GitHub/GitLab
+git push -u origin <branch>	# 推送并关联远程分支，首次推送新分支时
+git fetch			# 仅获取远程更新（不合并），检查远程变更
 ```
 
 **6. 撤销与回退**
 ```bash
-
+git reset --soft HEAD~1		# 撤销上一次提交（保留修改），修改提交信息或重新提交
+git reset --hard HEAD~1		# 彻底回退到上一次提交（丢失修改），放弃错误的提交
+git revert <commit_id>		# 生成一个新的提交来撤销指定提交	
+git stash			# 临时保存未提交的修改，切换分支前保存工作进度
+git stash pop			# 恢复最近暂存的修改，回到之前的工作状态
+git reset HEAD <文件名>		# 暂存区撤回单个添加文件
+git reset HEAD .		# 暂存区撤回所有添加文件
 ```
 
 **7. 日志与差异**
 ```bash
-
+git log			# 查看提交历史，检查项目变更记录
+git log --oneline	# 简洁版提交历史，快速浏览提交
+git log -p		# 查看详细修改内容，分析代码变动
+git diff		# 查看工作区与暂存区的差异，检查未暂存的修改
+git diff --staged	# 查看暂存区与最新提交的差异，确认即将提交的内容
 ```
 
 **8. 高级操作**
 ```bash
-
+git cherry-pick <commit_id>  	# 复制指定提交到当前分支，选择性合并某个提交
+git rebase -i HEAD~3		# 交互式变基（合并/修改提交），优化提交历史
+git bisect start		# 二分查找引入 Bug 的提交，定位问题代码
 ```
 
 ## 版本历史
 > v1.0 --- 2025.05.28
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-（2）仓库操作
-	git init				初始化本地仓库		新建项目时
-	git clone <repo_url>	克隆远程仓库		下载已有项目（如 GitHub/GitLab 项目）
-	git remote -v			查看远程仓库地址	确认当前关联的远程仓库
-
-（3）提交与修改
-	git status					 查看工作区状态								检查哪些文件被修改/暂存
-	git add <file>				 将文件添加到暂存区								准备提交特定文件
-	git add .					 添加所有修改（不含忽略文件）						批量暂存改动
-	git add -A					 添加所有修改（包括删除的文件）					确保所有改动被暂存
-	git commit -m "message"		 提交暂存区的文件								常规提交
-	git commit -am "message"	 直接提交所有 已跟踪文件 的修改（跳过 git add）	通用提交（不适用于新文件），目前用的多
-	git restore <file>			 撤销工作区的修改（未暂存）						丢弃未保存的更改
-	git restore --staged <file>	 将文件从暂存区撤回（不撤销修改）					误 git add 后撤回
-	git rm <file>				 删除文件并暂存操作								需要从版本库中删除文件时
-
-（4）分支管理
-	git branch							查看本地分支					查看当前分支
-	git branch <branch_name>			创建新分支					开发新功能/修复 Bug
-	git checkout <branch_name>			切换到指定分支					切换工作分支
-	git switch <branch_name>			（Git 2.23+）更安全的分支切换	替代 git checkout
-	git merge <branch_name>				合并指定分支到当前分支			功能开发完成后合并
-	git rebase <branch_name>			变基操作（线性提交历史）			保持提交历史整洁
-	git branch -d <branch_name>			删除本地分支					清理已合并的分支
-	git push origin --delete <branch>	删除远程分支					清理远程无用分支
-
-（5）远程协作
-	git pull						拉取远程分支并合并		同步最新代码
-	git pull --rebase				拉取远程分支并变基		避免多余的合并提交
-	git push					  	推送本地提交到远程		上传代码到 GitHub/GitLab
-	git push -u origin <branch>	  	推送并关联远程分支		首次推送新分支时
-	git fetch						仅获取远程更新（不合并）	检查远程变更
-
-（6）撤销与回退
-	git reset --soft HEAD~1	撤销上一次提交（保留修改）		修改提交信息或重新提交
-	git reset --hard HEAD~1	彻底回退到上一次提交（丢失修改）	放弃错误的提交
-	git revert <commit_id>	生成一个新的提交来撤销指定提交	安全撤销公共提交
-	git stash				临时保存未提交的修改			切换分支前保存工作进度
-	git stash pop			恢复最近暂存的修改				回到之前的工作状态
-	git reset HEAD <文件名>	暂存区撤回单个添加文件
-	git reset HEAD .		暂存区撤回所有添加文件
-
-（7）日志与差异
-	git log				查看提交历史				检查项目变更记录
-	git log --oneline	简洁版提交历史				快速浏览提交
-	git log -p			查看详细修改内容			分析代码变动
-	git diff			查看工作区与暂存区的差异		检查未暂存的修改
-	git diff --staged	查看暂存区与最新提交的差异	确认即将提交的内容
-
-（8）高级操作
-	git cherry-pick <commit_id>  复制指定提交到当前分支		选择性合并某个提交
-	git rebase -i HEAD~3		 交互式变基（合并/修改提交）	优化提交历史
-	git bisect start			 二分查找引入 Bug 的提交	定位问题代码
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
