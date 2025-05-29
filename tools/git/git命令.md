@@ -28,70 +28,56 @@ git reset HEAD <文件名>			# 暂存区撤回单个添加文件
 git reset HEAD .			# 暂存区撤回所有添加文件
 ```
 ### 命令详解
-1. **基础配置**
+
+**1. 基础配置**
 ```bash
 git config --global user.name "xueqianghu"		# 配置全局用户名
 git config --global user.email "xueqianghu@kaifa.cn"	# 配置全局邮箱
 git config --list 
 ```
 
-**添加子目录**
-```cmake
+**2. 仓库操作**
+```bash
+git init		# 初始化本地仓库
+git clone <repo_url>	# 克隆远程仓库	
+git remote -v		# 查看远程仓库地址，确认当前关联的远程仓库
+```
+
+**3. 提交与修改**
+```bash
+git status			# 查看工作区状态，检查哪些文件被修改/暂存
+git add <file>			# 将文件添加到暂存区								
+git add .			# 添加所有修改（不含忽略文件）					
+git add -A			# 添加所有修改（包括删除的文件
+git commit -m "message"		# 提交暂存区的文件  
+git commit -am "message"	# 提交暂存区文件到远程仓库，目前常用
+git restore <file>		# 撤销工作区的修改（未暂存）  
+git restore --staged <file>	# 将文件从暂存区撤回（不撤销修改）  
+git rm <file>			# 删除文件并暂存操作   
+```
+
+**4. 分支管理**
+```bash
 
 ```
 
-**包含其他文件**
-```cmake
+**5. 远程协作**
+```bash
 
 ```
 
-**生成可执行文件**
-```cmake
+**6. 撤销与回退**
+```bash
 
 ```
 
-**生成库文件**
-```cmake
+**7. 日志与差异**
+```bash
 
 ```
 
-**为目标添加头文件搜索路径**
-```cmake
-
-```
-
-**链接库文件**
-```cmake
-
-```
-
-**循环遍历列表**
-```cmake
-
-```
-
-**查找外部依赖包**
-```cmake
-
-```
-
-**查找库文件路径**
-```cmake
-
-```
-
-**安装目标文件到指定目录**
-```cmake
-
-```
-
-**生成配置文件**
-```cmake
-
-```
-
-**打印消息**
-```cmake
+**8. 高级操作**
+```bash
 
 ```
 
