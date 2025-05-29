@@ -18,12 +18,27 @@
 > -这是引用中的列表项
 
 **2. 代码块**
-> 
 
+**行内代码**
 
-**定义变量并赋值**
+这是一个行内代码示例：`print("Hello, Markdown")`
+
+**块级代码**
+> **python**
+```python
+  def hello():
+    print("Hello, Markdown")
+```
+> **cpp**
+```cpp
+  int x = 0;
+  print("Hello, Markdown");
+```
+> **cmake**
 ```cmake
-
+  set(USE_FEATURE ON CACHE BOOL "enable feature")
+  add_library(my_lib STATIC lib.cpp)
+  message("Sources: ${SRC_FILES}")
 ```
 
 **添加子目录**
