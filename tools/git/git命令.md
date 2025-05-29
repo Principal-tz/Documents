@@ -16,8 +16,7 @@
 git status 				# 查看当前仓库状态，显示有变更文件
 git checkout feature/xueqianghu		# 切换分支
 git branch <分支名>			# 创建新分支
-git pull	 			# 拉取远程仓库到本地
-git add <文件名>	 			# 工作区提交到暂存区
+git pull	 			# 拉取远程仓库到本地  
 git commit -am "提交信息描述"		# 暂存区所有修改提交到远程仓库，并附加信息描述
 git push -u origin feature/xueqianghu 	# 本地代码上传到远程分支
 git log 				# 查看历史提交记录
@@ -26,6 +25,7 @@ git add -A/--all 			# 整个仓库改动添加到暂存区
 git add * 		 		# 当前目录下改动添加到暂存区
 git reset HEAD <文件名>			# 暂存区撤回单个添加文件
 git reset HEAD .			# 暂存区撤回所有添加文件
+git add <文件名> 			# 工作区修改提交到暂存区
 ```
 ### 命令详解
 
@@ -58,7 +58,14 @@ git rm <file>			# 删除文件并暂存操作
 
 **4. 分支管理**
 ```bash
-
+git branch				# 查看本地分支
+git branch <branch_name>		# 创建新分支					
+git checkout <branch_name>		# 切换到指定分支  
+git switch <branch_name>		# （Git 2.23+）更安全的分支切换，替代 git checkout
+git merge <branch_name>			# 合并指定分支到当前分支
+git rebase <branch_name>		# 变基操作（线性提交历史）
+git branch -d <branch_name>		# 删除本地分支					
+git push origin --delete <branch>	# 删除远程分支					
 ```
 
 **5. 远程协作**
