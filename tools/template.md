@@ -19,31 +19,36 @@
 
 **2. 代码块**
 
-**行内代码**
+**（1）行内代码**
 
 这是一个行内代码示例：`print("Hello, Markdown")`
 
-**块级代码**
-> **python**
+**（2）块级代码**
+
+**python**
 ```python
   def hello():
     print("Hello, Markdown")
 ```
-> **cpp**
+
+**cpp**
 ```cpp
   int x = 0;
   print("Hello, Markdown");
 ```
-> **cmake**
+
+**cmake**
 ```cmake
   set(USE_FEATURE ON CACHE BOOL "enable feature")
   add_library(my_lib STATIC lib.cpp)
   message("Sources: ${SRC_FILES}")
 ```
 
-**添加子目录**
-```cmake
-
+**bash**
+```bash
+  git status                        # 查看仓库状态，显示变更文件
+  git checkout feature/xueqianghu   # 切换分支
+  git commit -am "提交信息描述"      # 暂存区所有修改提交到远程仓库，并附加信息描述
 ```
 
 **包含其他文件**
